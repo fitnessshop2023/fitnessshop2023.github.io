@@ -1,0 +1,25 @@
+.users_page {
+    padding: 20px 2%;
+    h1 {
+        font-size: 42px;
+        line-height: 50px;
+    }
+    ul {
+        margin-top: 10px;
+        li {
+            padding: 5px 0;
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+.user_page {
+    padding: 20px 2%;
+    h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
