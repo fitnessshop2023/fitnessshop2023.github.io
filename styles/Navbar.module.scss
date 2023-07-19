@@ -12,4 +12,19 @@
             color: #505050;
         }
     }
+    .languageBlock {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        gap: 10px;
+        margin-left: auto;
+        a {
+            background-color: white;
+            padding: 4px;
+            border-radius: 15%;
+            &:hover {
+                color: #505050;
+            }
+        }
+    }
 }
