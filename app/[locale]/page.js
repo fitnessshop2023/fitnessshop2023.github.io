@@ -1,4 +1,3 @@
-import UserLoginForm from '@/components/forms/UserLoginForm/UserLoginForm';
 import UserRegistrationForm from '@/components/forms/UserRegistrationForm/UserRegistrationForm';
 import MainContainer from '@/components/MainContainer';
 import styles from '@/styles/Home.module.scss';
@@ -9,7 +8,6 @@ export default function Home() {
       <div className={styles.home_page}>
         <h1>Home page</h1>
         <UserRegistrationForm />
-        <UserLoginForm />
       </div>
     </MainContainer>
   );
