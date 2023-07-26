@@ -2,10 +2,5 @@
   "navbar": {
     "home": "Головна",
     "users": "Користувачі"
-  },
-  "login_form": {
-    "username": "Ім'я користувача/email",
-    "password": "Пароль",
-    "login": "Ввійти"
   }
 }
