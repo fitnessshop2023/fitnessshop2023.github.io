@@ -2,5 +2,10 @@
   "navbar": {
     "home": "Home",
     "users": "Users"
+  },
+  "login_form": {
+    "username": "Uesrname/email",
+    "password": "Password",
+    "login": "Login"
   }
 }
