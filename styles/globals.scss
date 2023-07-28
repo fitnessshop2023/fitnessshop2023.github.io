@@ -1,3 +1,6 @@
+@import './variables.scss';
+@import './typography.scss';
+@import './mixins.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,5 +23,5 @@ ol {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: $font-family;
 }
