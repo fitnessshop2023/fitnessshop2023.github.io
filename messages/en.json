@@ -17,6 +17,11 @@
         "phone": "Enter phone number",
         "email": "Enter email",
         "password": "Enter password"
-      }
+      },
+  "login_form": {
+    "username": "Uesrname/email",
+    "password": "Password",
+    "login": "Login"
   }
+}
 }

@@ -1,0 +1,18 @@
+@mixin primary-btn($primary-btn-height, $primary-btn-padding, $primary-btn-color, $primary-btn-background, $primary-btn-border, $primary-btn-border-radius, $primary-btn-font-size, $primary-btn-font-style, $primary-btn-font-weight, $primary-btn-line-height, $primary-btn-disabled-color, $primary-btn-disabled-background, $primary-btn-disabled-border) {
+    height: $primary-btn-height;
+    padding: $primary-btn-padding;
+    color: $primary-btn-color;
+    background-color: $primary-btn-background;
+    border: $primary-btn-border;
+    border-radius: $primary-btn-border-radius;
+    font-size: $primary-btn-font-size;
+    font-style: $primary-btn-font-style;
+    font-weight: $primary-btn-font-weight;
+    line-height: $primary-btn-line-height;
+    
+    &:disabled {
+        color: $primary-btn-disabled-color;
+        background-color: $primary-btn-disabled-background;
+        border: $primary-btn-disabled-border;
+    }
+}
