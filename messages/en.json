@@ -2,5 +2,21 @@
   "navbar": {
     "home": "Home",
     "users": "Users"
+  },
+  "registration_form": {
+      "label": {
+        "firstName": "First name*",
+        "lastName": "Last name*",
+        "phone": "Phone number*",
+        "email": "Email*",
+        "password": "Password*"
+      },
+      "placeholder": {
+        "firstName": "Enter first name",
+        "lastName": "Enter last name",
+        "phone": "Enter phone number",
+        "email": "Enter email",
+        "password": "Enter password"
+      }
   }
 }
