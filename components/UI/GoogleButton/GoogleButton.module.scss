@@ -1,0 +1,17 @@
+.googleButton {
+  @apply w-full 
+  rounded-md 
+  border-[1px] 
+  text-sm 
+  border-black 
+  px-16 
+  py-2 flex 
+  items-center 
+  gap-3 
+  justify-center
+  hover:bg-extraLightGray
+  hover:duration-700;
+}
+.googleIcon {
+  @apply w-[24px] h-[24px];
+}

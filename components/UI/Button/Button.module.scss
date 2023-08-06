@@ -1,0 +1,12 @@
+.primary_btn {
+    @apply bg-primary 
+    p-2 
+    rounded-md 
+    w-full 
+    m-auto 
+    text-white 
+    font-medium
+    text-sm mt-[12px]
+    hover:bg-hoverPrimary
+    hover:duration-700;
+}

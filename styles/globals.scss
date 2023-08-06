@@ -1,6 +1,6 @@
-@import './variables.scss';
-@import './typography.scss';
-@import './mixins.scss';
+@import "./variables.scss";
+@import "./typography.scss";
+@import "./mixins.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,4 +24,12 @@ ol {
 
 body {
   font-family: $font-family;
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-md;
 }

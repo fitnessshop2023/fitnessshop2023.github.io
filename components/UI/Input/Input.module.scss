@@ -1,9 +1,12 @@
 .label {
-  @apply block text-sm font-medium leading-6 text-[#242424] pb-2;
+  @apply block text-xs font-medium text-black pb-1;
 }
 .input {
-  @apply block w-full py-2 px-4 rounded-md border-[1px] text-[13px] h-10 outline-none  text-gray-900  placeholder:text-gray-400 focus:ring-indigo-600 sm:text-sm sm:leading-6;
+  @apply block w-full py-2 px-16 rounded-md border-[1px]  h-10 outline-none  text-black  placeholder:text-darkGray  text-xs;
 }
 .show {
-  @apply absolute top-[50%] left-[80%] translate-y-[-50%] cursor-pointer text-sm;
+  @apply absolute top-[50%] left-[88%] translate-y-[-50%] cursor-pointer text-xs w-16 h-16;
+}
+.error {
+  @apply absolute text-xs text-error;
 }

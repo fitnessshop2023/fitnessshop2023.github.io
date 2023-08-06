@@ -1,0 +1,16 @@
+.modalContainer {
+  @apply fixed top-0 left-0 z-10 w-screen h-screen flex items-center justify-center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  @apply bg-white w-[600px] rounded p-4 relative overflow-y-auto h-full;
+}
+
+.modalHeader {
+  @apply flex justify-between mb-[45px];
+}
+
+.title {
+  @apply text-black text-lg font-semibold;
+}
