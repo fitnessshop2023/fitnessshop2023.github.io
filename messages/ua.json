@@ -3,9 +3,58 @@
     "home": "Головна",
     "users": "Користувачі"
   },
-  "login_form": {
-    "username": "Ім'я користувача/email",
-    "password": "Пароль",
-    "login": "Ввійти"
+  "registration_form": {
+    "title": {
+      "registration": "Реєстрація",
+      "register": "Зареєструватися",
+      "login": "Увійти",
+      "haveAnAccount": "Вже є акаунт?" ,
+      "googleRegister": "Зареєструватися через Google",
+      "or": "Або"
+    },
+    "label": {
+      "firstName": "Ім’я*",
+      "lastName": "Прізвище*",
+      "phone": "Номер телефону*",
+      "email": "Електронна адреса*",
+      "password": "Пароль*"
+    },
+    "placeholder": {
+      "firstName": "Введіть ім’я",
+      "lastName": "Введіть прізвище",
+      "phone": "Введіть номер телефону",
+      "email": "Введіть електронну адресу",
+      "password": "Введіть пароль"
+    },
+    "validation": {
+      "required": "Це поле обов'язкове для заповнення!",
+      "minLength": "Мінімальна довжина field",
+      "maxLength": "Максимальна довжина field",
+      "email": "Неправильна пошта",
+      "phone": "Номер повинен містити тільки цифри",
+      "password": "Небезпечний пароль"
+    }
+},
+"login_form": {
+  "title": {
+    "login": "Вхід",
+    "noAcc": "Ще не маєте акаунт?",
+    "rememberMe": "Запам’ятати мене",
+    "forgotPassword": "Забули пароль?",
+    "signUp": "Зареєструватися",
+    "SignIn": "Увійти",
+    "SignInGoogle": "Увійти через Google"
+  },
+  "placeholder": {
+    "email": "Введіть електронну адресу",
+    "password": "Введіть пароль"
+  },
+  "label": {
+    "email": "Електронна адреса*",
+    "password": "Пароль*"
+  },
+  "validation": {
+    "required": "Поле не може бути пустим"
   }
+}
 }
