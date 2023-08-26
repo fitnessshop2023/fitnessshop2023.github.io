@@ -33,7 +33,9 @@
         "email": "Incorrect mail",
         "phone": "Phone number must contain only numbers",
         "password": "Insecure password"
-
+      },
+      "request": {
+        "success" : "Registration successful"
       }
 },
 "login_form": {

@@ -1,4 +1,3 @@
-import UserRegistrationForm from '@/components/forms/UserRegistrationForm/UserRegistrationForm';
 import MainContainer from '@/components/MainContainer';
 import styles from '@/styles/Home.module.scss';
 

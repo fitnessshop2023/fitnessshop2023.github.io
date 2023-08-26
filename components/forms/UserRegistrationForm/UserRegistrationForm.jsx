@@ -1,11 +1,12 @@
 'use client';
 
+import { useRegisterUserMutation } from '@/redux/userApi';
 import { yupResolver } from '@hookform/resolvers/yup';
-import axios from 'axios';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import Alert from '@/components/UI/Alert/Alert';
 import Button from '@/components/UI/Button/Button';
 import GoogleButton from '@/components/UI/GoogleButton/GoogleButton';
 import Input from '@/components/UI/Input/Input';
@@ -15,9 +16,9 @@ import validationSchema from './validation';
 import styles from './UserRegistrationForm.module.scss';
 
 export default function UserRegistrationForm({ setRenderForm }) {
-  const [loading, setLoading] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [registerUser, { isLoading, isSuccess, isError, error }] = useRegisterUserMutation();
   const t = useTranslations('registration_form');
-
   const {
     register,
     handleSubmit,
@@ -27,19 +28,30 @@ export default function UserRegistrationForm({ setRenderForm }) {
     resolver: yupResolver(validationSchema(t)),
   });
 
-  const onSubmit = async (data) => {
-    setLoading(true);
+  useEffect(() => {
+    if (isSuccess || isError) {
+      setShowAlert(true);
+
+      const timer = setTimeout(() => {
+        setShowAlert(false);
+        if (isSuccess) setRenderForm('login');
+      }, 1000);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [isSuccess, isError]);
+
+  const onSubmit = async (user) => {
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/registration`, data);
-      return response;
+      await registerUser(user);
     } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
+      console.log(error);
     }
   };
 
-  if (loading) {
+  if (isLoading) {
     return <Spinner />;
   }
 
@@ -105,6 +117,8 @@ export default function UserRegistrationForm({ setRenderForm }) {
           {t('title.login')}
         </span>
       </div>
+      {showAlert && isSuccess && <Alert success={true} message={t('request.success')} />}
+      {showAlert && isError && <Alert error={true} message={error?.data?.message} />}
     </>
   );
 }
