@@ -1,7 +1,19 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { checkUser } from '@/redux/authSlice';
 import Head from 'next/head';
-import Navbar from './Navbar';
+import Navbar from './Navbar/Navbar';
 
 export default function MainContainer({ children, keywords }) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkUser());
+  }, []);
+
   return (
     <>
       <Head>
