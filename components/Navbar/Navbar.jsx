@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next-intl/client';
-import LanguageLink from 'next-intl/link';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -36,7 +35,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={styles.navbar2}>
+      {/* <div className={styles.navbar2}>
         <div className={styles.languageBlock}>
           <LanguageLink href="/" locale="en">
             EN
@@ -45,8 +44,8 @@ export default function Navbar() {
             UA
           </LanguageLink>
         </div>
-      </div>
-      <div className={styles.navbar}>
+      </div> */}
+      <nav className={styles.navbar}>
         <ModalWindow
           setIsOpen={setIsOpen}
           isOpen={isOpen}
@@ -72,7 +71,7 @@ export default function Navbar() {
             <img src={checkActiveLink('more')} />
           </Link>
         </div>
-      </div>
+      </nav>
     </>
   );
 }

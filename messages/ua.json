@@ -59,5 +59,11 @@
   "validation": {
     "required": "Поле не може бути пустим"
   }
+},
+"footer": {
+  "blog": "Блог",
+  "connect": "Зв'язатись з нами",
+  "emailDistribution": "Email розсилка",
+  "emailPlaceholder": "Введіть свій email"
 }
 }

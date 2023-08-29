@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 
 import { checkUser } from '@/redux/authSlice';
 import Head from 'next/head';
+import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
 
 export default function MainContainer({ children, keywords }) {
@@ -25,6 +26,7 @@ export default function MainContainer({ children, keywords }) {
       </Head>
       <Navbar />
       <div>{children}</div>
+      <Footer />
     </>
   );
 }
