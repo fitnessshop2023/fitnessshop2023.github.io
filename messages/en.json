@@ -59,5 +59,11 @@
   "validation": {
     "required": "The field cannot be empty"
   }
+},
+"footer": {
+  "blog": "Blog",
+  "connect": "Contact us",
+  "emailDistribution": "Email distribution",
+  "emailPlaceholder": "Enter your email"
 }
 }
