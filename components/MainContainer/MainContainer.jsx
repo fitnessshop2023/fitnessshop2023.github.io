@@ -5,8 +5,10 @@ import { useDispatch } from 'react-redux';
 
 import { checkUser } from '@/redux/authSlice';
 import Head from 'next/head';
-import Footer from './Footer/Footer';
-import Navbar from './Navbar/Navbar';
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
+
+import styles from './MainContainer.module.scss';
 
 export default function MainContainer({ children, keywords }) {
   const dispatch = useDispatch();
@@ -25,7 +27,7 @@ export default function MainContainer({ children, keywords }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div>{children}</div>
+      <div className={styles.container}>{children}</div>
       <Footer />
     </>
   );

@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import UserLoginForm from '../forms/UserLoginForm/UserLoginForm';
-import UserRegistrationForm from '../forms/UserRegistrationForm/UserRegistrationForm';
+import UserLoginForm from '../Forms/UserLoginForm/UserLoginForm';
+import UserRegistrationForm from '../Forms/UserRegistrationForm/UserRegistrationForm';
 import ModalWindow from '../ModalWindow/ModalWindow';
 
 import styles from './Navbar.module.scss';

@@ -65,5 +65,9 @@
   "connect": "Contact us",
   "emailDistribution": "Email distribution",
   "emailPlaceholder": "Enter your email"
+},
+"homePage": {
+  "bestPrice": "Best price",
+  "UAH": "UAH"
 }
 }

@@ -10,6 +10,7 @@ module.exports = {
       primary: '#4c7a53',
       error: '#ff3b30',
       black: '#242424',
+      discount: '#FF2F24',
       extraDarkGray: '#505050',
       darkGray: '#7c7c7c',
       lightGray: '#d3d3d3',
