@@ -65,5 +65,9 @@
   "connect": "Зв'язатись з нами",
   "emailDistribution": "Email розсилка",
   "emailPlaceholder": "Введіть свій email"
+},
+"homePage": {
+  "bestPrice": "Найкраща ціна",
+  "UAH": "грн"
 }
 }
