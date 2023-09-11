@@ -1,0 +1,12 @@
+.reviewBlock {
+  @apply flex transition-transform ease-out duration-500;
+}
+.wrapper {
+  @apply bg-white p-3 rounded-md mt-6 min-w-full;
+}
+.customer {
+  @apply font-medium text-xs mb-4 block;
+}
+.comment {
+  @apply text-extraDarkGray text-xs;
+}
