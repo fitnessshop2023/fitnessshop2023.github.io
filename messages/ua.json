@@ -69,5 +69,8 @@
 "homePage": {
   "bestPrice": "Найкраща ціна",
   "UAH": "грн"
+},
+"customerReviews" : {
+  "customerReviews": "Відгуки покупців"
 }
 }
