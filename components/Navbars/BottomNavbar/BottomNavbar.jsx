@@ -6,11 +6,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import UserLoginForm from '../../Forms/UserLoginForm/UserLoginForm';
-import UserRegistrationForm from '../../Forms/UserRegistrationForm/UserRegistrationForm';
+
 import ModalWindow from '../../ModalWindow/ModalWindow';
 
 import styles from './BottomNavbar.module.scss';
+import UserLoginForm from '@/components/forms/UserLoginForm/UserLoginForm';
+import UserRegistrationForm from '@/components/forms/UserRegistrationForm/UserRegistrationForm';
 
 export default function Navbar() {
   const isAuth = useSelector((state) => state.auth.isAuth);
