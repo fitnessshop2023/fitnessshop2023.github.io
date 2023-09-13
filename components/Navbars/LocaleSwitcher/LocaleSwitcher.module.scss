@@ -1,0 +1,17 @@
+.locale_switcher {
+    .dropdown {
+        @apply relative;
+        .dropdown_btn {
+            @apply flex cursor-pointer;
+            .p {
+                @apply mr-[8px];
+            }
+        }
+        .dropdown_contnent {
+            @apply absolute top-[100%] left-0 hidden;
+            &.show {
+                @apply block bg-white;
+            }
+        }
+    }
+}

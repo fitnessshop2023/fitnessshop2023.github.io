@@ -1,7 +1,12 @@
 {
   "navbar": {
     "home": "Home",
-    "users": "Users"
+    "users": "Users",
+    "search": "Search"
+  },
+  "LocaleSwitcher": {
+    "ua": "Укр",
+    "en": "En"
   },
   "registration_form": {
     "title": {
