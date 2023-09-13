@@ -1,7 +1,9 @@
 {
   "navbar": {
     "home": "Home",
-    "users": "Users",
+    "users": "Users"
+  },
+  "search_input": {
     "search": "Search"
   },
   "LocaleSwitcher": {

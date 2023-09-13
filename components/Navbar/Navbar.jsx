@@ -7,9 +7,9 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 
-import ModalWindow from '../../ModalWindow/ModalWindow';
+import ModalWindow from '../ModalWindow/ModalWindow';
 
-import styles from './BottomNavbar.module.scss';
+import styles from './Navbar.module.scss';
 import UserLoginForm from '@/components/forms/UserLoginForm/UserLoginForm';
 import UserRegistrationForm from '@/components/forms/UserRegistrationForm/UserRegistrationForm';
 

@@ -1,7 +1,9 @@
 {
   "navbar": {
     "home": "Головна",
-    "users": "Користувачі",
+    "users": "Користувачі"
+  },
+  "search_input": {
     "search": "Пошук"
   },
   "LocaleSwitcher": {

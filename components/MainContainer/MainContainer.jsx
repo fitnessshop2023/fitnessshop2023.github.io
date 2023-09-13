@@ -6,10 +6,10 @@ import { useDispatch } from 'react-redux';
 import { checkUser } from '@/redux/authSlice';
 import Head from 'next/head';
 import Footer from '../Footer/Footer';
-import BottomNavbar from '../Navbars/BottomNavbar/BottomNavbar';
 
 import styles from './MainContainer.module.scss';
-import TopNavbar from '../Navbars/TopNavbar/TopNavbar';
+import Navbar from '../Navbar/Navbar';
+import Header from '../Header/Header';
 
 export default function MainContainer({ children, keywords }) {
   const dispatch = useDispatch();
@@ -27,10 +27,10 @@ export default function MainContainer({ children, keywords }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <TopNavbar />
+      <Header />
+      <Navbar />
       <div className={styles.container}>{children}</div>
       <Footer />
-      <BottomNavbar/>
     </>
   );
 }

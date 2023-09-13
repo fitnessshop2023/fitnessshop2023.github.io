@@ -1,16 +1,16 @@
 'use client'
 import { useLocale, useTranslations } from 'next-intl';
 import LanguageLink from 'next-intl/link'
-import styles from './TopNavbar.module.scss';
+import styles from './Header.module.scss';
 import { useTransition } from 'react';
 import { usePathname, useRouter } from 'next-intl/client';
-import LocaleSwitcher from '../LocaleSwitcher/LocaleSwitcher';
+import LocaleSwitcher from './LocaleSwitcher/LocaleSwitcher';
 
-export default function TopNavbar() {
-    const t = useTranslations('navbar');
+export default function Header() {
+    const t = useTranslations('search_input');
 
     return (
-        <nav className={styles.nav}>
+        <header className={styles.header}>
             <div className={styles.search_block}>
                 <input className={styles.input} type="text" name="search" id="search" placeholder={t('search')} />
                 <button className={styles.btn}>
@@ -26,6 +26,6 @@ export default function TopNavbar() {
                 </LanguageLink> */}
                 <LocaleSwitcher/>
             </div>
-        </nav>
+        </header>
     )
 }
