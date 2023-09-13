@@ -74,5 +74,9 @@
 "homePage": {
   "bestPrice": "Best price",
   "UAH": "UAH"
+},
+"customerReviews" : {
+  "customerReviews": "Customer reviews"
 }
+
 }
