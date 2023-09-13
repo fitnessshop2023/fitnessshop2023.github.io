@@ -1,0 +1,15 @@
+.alertPosition {
+  @apply justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none;
+}
+.alertWidth {
+  @apply relative w-auto my-6 mx-auto max-w-3xl p-16;
+}
+.alertContainer {
+  @apply rounded-lg shadow-lg relative flex p-16 w-full bg-white outline-none focus:outline-none gap-[114px] items-center border-[1px];
+}
+.alertSuccess {
+  @apply bg-[#f2fff5] border-lightGreen;
+}
+.alertError {
+  @apply bg-[#fff3f2] border-error;
+}

@@ -1,11 +1,82 @@
 {
   "navbar": {
     "home": "Home",
-    "users": "Users"
+    "users": "Users",
+    "search": "Search"
   },
-  "login_form": {
-    "username": "Uesrname/email",
-    "password": "Password",
-    "login": "Login"
+  "LocaleSwitcher": {
+    "ua": "Укр",
+    "en": "En"
+  },
+  "registration_form": {
+    "title": {
+      "registration": "Registration",
+      "register": "Sign up",
+      "login": "Log in",
+      "haveAnAccount": "Already have an account?",
+      "googleRegister": "Sign up with Google",
+      "or": "Or"
+    },
+      "label": {
+        "firstName": "First name*",
+        "lastName": "Last name*",
+        "phone": "Phone number*",
+        "email": "Email*",
+        "password": "Password*"
+      },
+      "placeholder": {
+        "firstName": "Enter first name",
+        "lastName": "Enter last name",
+        "phone": "Enter phone number",
+        "email": "Enter email",
+        "password": "Enter password"
+      },
+      "validation": {
+        "required": "This field is required!",
+        "minLength": "Min length field",
+        "maxLength": "Max length field",
+        "email": "Incorrect mail",
+        "phone": "Phone number must contain only numbers",
+        "password": "Insecure password"
+      },
+      "request": {
+        "success" : "Registration successful"
+      }
+},
+"login_form": {
+  "title": {
+    "login": "Login",
+    "noAcc": "Don't have an account yet?",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "signUp": "Sign up",
+    "SignIn": "Sign in",
+    "SignInGoogle": "Sign in with Google"
+  },
+  "placeholder": {
+    "email": "Enter email",
+    "password": "Enter password"
+  },
+  "label": {
+    "email": "Email*",
+    "password": "Password*"
+  },
+  "validation": {
+    "required": "The field cannot be empty"
   }
+},
+"footer": {
+  "blog": "Blog",
+  "connect": "Contact us",
+  "emailDistribution": "Email distribution",
+  "emailPlaceholder": "Enter your email"
+},
+"homePage": {
+  "bestPrice": "Best price",
+  "UAH": "UAH"
+},
+"customerReviews" : {
+  "customerReviews": "Customer reviews"
+}
+
 }

@@ -1,0 +1,7 @@
+.container {
+  @apply p-16 bg-extraLightGray;
+  h1,
+  h2 {
+    @apply text-[17px] font-semibold text-black;
+  }
+}

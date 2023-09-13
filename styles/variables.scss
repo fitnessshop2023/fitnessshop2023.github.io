@@ -1,0 +1,96 @@
+// colors
+$black: #242424;
+$extra-dark-gray: #505050;
+$dark-gray: #7c7c7c;
+$gray: #a7a7a7;
+$light-gray: #d3d3d3;
+$extra-light-gray: #f3f2f8;
+$white: #fff;
+$green: #4c7a53;
+$light-green: #34c759;
+$red: #ff3b30;
+$yellow: #ffcc00;
+
+$primary-color: $green;
+
+// font-family
+$font-family: "Inter", sans-serif;
+
+// buttons
+
+$primary-btn-height: 36px;
+$primary-btn-padding: 0px 16px;
+$primary-btn-color: $white;
+$primary-btn-background: $primary-color;
+$primary-btn-border: 1px solid $primary-color;
+$primary-btn-border-radius: 6px;
+$primary-btn-font-size: 14px;
+$primary-btn-font-style: normal;
+$primary-btn-font-weight: 500;
+$primary-btn-line-height: 16px;
+
+$primary-btn-disabled-color: $gray;
+$primary-btn-disabled-background: $extra-light-gray;
+$primary-btn-disabled-border: 1px solid $extra-light-gray;
+
+$secondary-btn-height: 36px;
+$secondary-btn-padding: 0px 16px;
+$secondary-btn-color: $extra-dark-gray;
+$secondary-btn-background: $white;
+$secondary-btn-border: 1px solid $extra-dark-gray;
+$secondary-btn-border-radius: 6px;
+$secondary-btn-font-size: 14px;
+$secondary-btn-font-style: normal;
+$secondary-btn-font-weight: 500;
+$secondary-btn-line-height: 16px;
+
+$secondary-btn-disabled-color: $gray;
+$secondary-btn-disabled-background: $white;
+$secondary-btn-disabled-border: 1px solid $light-gray;
+
+$tertiary-btn-padding: 0px 16px;
+$tertiary-btn-color: $primary-color;
+$tertiary-btn-font-size: 14px;
+$tertiary-btn-font-style: normal;
+$tertiary-btn-font-weight: 500;
+$tertiary-btn-line-height: 16px;
+
+$tertiary-btn-disabled-color: $gray;
+
+// inputs
+
+$label-font-color: $black;
+$label-font-size: 12px;
+$label-font-style: normal;
+$label-font-weight: 500;
+$label-line-height: 16px;
+
+$helper-font-color: $dark-gray;
+$helper-font-size: 12px;
+$helper-font-style: normal;
+$helper-font-weight: 500;
+$helper-line-height: 16px;
+$helper-error-font-color: $red;
+
+$input-height: 36px;
+$input-padding: 8px 16px;
+$input-font-size: 12px;
+$input-font-style: normal;
+$input-font-weight: 400;
+$input-line-height: 16px;
+
+$default-input-color: $dark-gray;
+$default-input-background: $white;
+$default-input-border: 1px solid $dark-gray;
+
+$filled-input-color: $black;
+$filled-input-background: $white;
+$filled-input-border: 1px solid $dark-gray;
+
+$error-input-color: $extra-dark-gray;
+$error-input-background: $white;
+$error-input-border: 1px solid $red;
+
+$disabled-input-color: $gray;
+$disabled-input-background: $extra-light-gray;
+$disabled-input-border: 1px solid $light-gray;

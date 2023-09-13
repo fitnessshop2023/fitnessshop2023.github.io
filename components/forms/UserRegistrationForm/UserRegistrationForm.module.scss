@@ -1,6 +1,32 @@
-.label {
-  @apply block text-sm font-medium leading-6 text-gray-900;
+.form {
+  @apply flex justify-center flex-col gap-[23px];
 }
-.input {
-  @apply block w-full p-3 rounded-md border-0 outline-none py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+.loginContainer {
+  @apply flex justify-between gap-16 items-center mt-16 mb-[36px];
+}
+.login {
+  @apply text-sm text-primary underline cursor-pointer hover:text-hoverPrimary font-medium;
+}
+.or {
+  @apply relative 
+  text-center 
+  text-xs
+  mt-8
+  mb-7
+  text-extraDarkGray
+  overflow-hidden 
+  before:content-[""] 
+  before:absolute 
+  before:top-[50%] 
+  before:h-[1px] 
+  before:w-full 
+  before:bg-extraDarkGray
+  before:left-[60%]
+  after:content-[""] 
+  after:absolute 
+  after:top-[50%] 
+  after:h-[1px] 
+  after:w-full 
+  after:bg-extraDarkGray
+  after:right-[60%];
 }

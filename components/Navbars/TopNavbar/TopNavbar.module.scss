@@ -1,0 +1,13 @@
+.nav {
+  @apply flex items-center justify-between w-full bg-white p-16;
+}
+.search_block {
+  @apply w-[66%] relative flex bg-white px-16 py-[8px] border border-extraDarkGray rounded-md pl-[40px];
+}
+.input {
+  @apply w-full text-xs leading-[16px] outline-none placeholder:text-extraDarkGray;
+
+}
+.btn {
+  @apply absolute top-0 left-0 w-[40px] h-full pl-[16px] pr-[8px];
+}

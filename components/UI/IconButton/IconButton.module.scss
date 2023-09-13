@@ -1,0 +1,7 @@
+.button {
+  @apply bg-primary w-9 h-9 p-1 hover:bg-hoverPrimary rounded-md;
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.11) inset, 0px 1px 3px 0px rgba(58, 58, 58, 0.1);
+  img {
+    margin: 0 auto;
+  }
+}
