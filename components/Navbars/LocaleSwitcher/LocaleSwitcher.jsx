@@ -18,7 +18,6 @@ export default function LocaleSwitcher() {
             setDropdownVisibility(false);
           }
         };
-      
         document.addEventListener('click', closeDropdown);
         return () => {
           document.removeEventListener('click', closeDropdown);
