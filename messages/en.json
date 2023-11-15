@@ -79,6 +79,9 @@
 },
 "customerReviews" : {
   "customerReviews": "Customer reviews"
+},
+"blogHomePage": {
+  "blog": "Blog",
+  "showMore": "More articles"
 }
-
 }
