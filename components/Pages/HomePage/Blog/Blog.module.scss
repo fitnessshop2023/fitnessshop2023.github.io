@@ -1,0 +1,16 @@
+.container {
+  @apply mt-6 flex flex-col gap-3;
+}
+.blogContainer {
+  @apply bg-white rounded-xl overflow-hidden;
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.11) inset, 0px 1px 3px 0px rgba(58, 58, 58, 0.1);
+}
+.title {
+  @apply text-xs text-black font-medium;
+}
+.description {
+  @apply text-xs text-extraDarkGray mt-2;
+}
+.buttonLink {
+  @apply w-full mt-7 text-primary underline text-sm  hover:text-hoverPrimary;
+}

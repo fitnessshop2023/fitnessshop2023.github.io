@@ -5,7 +5,7 @@ export const reviewsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_URL }),
   endpoints: (build) => ({
     getCompanyReviews: build.query({
-      query: () => '/comment/company-comments',
+      query: () => '/comments/company',
     }),
   }),
 });

@@ -79,5 +79,9 @@
 },
 "customerReviews" : {
   "customerReviews": "Відгуки покупців"
+},
+"blogHomePage": {
+  "blog": "Блог",
+  "showMore": "Більше статей"
 }
 }
