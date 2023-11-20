@@ -6,12 +6,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-
 import ModalWindow from '../ModalWindow/ModalWindow';
 
-import styles from './Navbar.module.scss';
 import UserLoginForm from '@/components/forms/UserLoginForm/UserLoginForm';
 import UserRegistrationForm from '@/components/forms/UserRegistrationForm/UserRegistrationForm';
+import styles from './Navbar.module.scss';
 
 export default function Navbar() {
   const isAuth = useSelector((state) => state.auth.isAuth);
@@ -61,6 +60,9 @@ export default function Navbar() {
           <Link href="/basket">
             <img src={checkActiveLink('basket')} />
           </Link>
+          <Link href="/more">
+            <img src={checkActiveLink('more')} />
+          </Link>
           {isAuth ? (
             <Link href="/profile">
               <img src={checkActiveLink('profile')} />
@@ -68,9 +70,6 @@ export default function Navbar() {
           ) : (
             <img src="/icons/navbar_profile.svg" onClick={() => setIsOpen(true)} className="cursor-pointer" />
           )}
-          <Link href="/more">
-            <img src={checkActiveLink('more')} />
-          </Link>
         </div>
       </nav>
     </>
