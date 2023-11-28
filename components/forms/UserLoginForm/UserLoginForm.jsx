@@ -34,8 +34,8 @@ export default function UserLoginForm({ setRenderForm, setIsOpen }) {
 
   useEffect(() => {
     if (isSuccess) {
-      const { token } = data;
-      dispatch(setUser({ token }));
+      const { token, userId } = data;
+      dispatch(setUser({ token, userId }));
       reset();
       setIsOpen(false);
     }
