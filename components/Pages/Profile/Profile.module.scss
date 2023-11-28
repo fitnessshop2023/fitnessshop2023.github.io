@@ -1,0 +1,49 @@
+.profiel_page {
+    @apply relative pb-[24px] overflow-hidden;
+    .head {
+        h1 {
+            @apply mb-[32px] text-md leading-5 font-semibold;
+        }
+    }
+    h2 {
+        @apply mb-[20px] text-[14px] font-semibold text-extraDarkGray;
+    }
+    .profile_inner {
+        .inner_list {
+            @apply flex flex-col gap-[8px] mb-[24px];
+            li {
+                @apply flex items-center justify-between py-3 px-4 rounded-md bg-white;
+                button {
+                    @apply flex items-center gap-2 ;
+                    span {
+                        @apply text-[14px] font-medium text-black;
+                    }
+                }
+                .details {
+                    @apply absolute top-0 left-full w-full h-full bg-extraLightGray;
+                    .details_head {
+                        h1 {
+                            @apply mb-[32px] text-md leading-5 font-semibold;
+                        }
+                        .back_btn {
+                            @apply flex items-center gap-2 mb-6;
+                            span {
+                                @apply text-sm font-semibold text-extraDarkGray;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    .contact_us {
+        ul {
+            @apply flex items-center gap-[20px];
+        }
+    }
+    .logout {
+       @apply w-full max-w-[288px] h-[44px] flex items-center justify-center gap-3 px-4 mt-[32px] rounded-md border border-extraDarkGray bg-white; 
+       box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.11) inset, 0px 1px 3px 0px rgba(58, 58, 58, 0.10);
+    }
+}
