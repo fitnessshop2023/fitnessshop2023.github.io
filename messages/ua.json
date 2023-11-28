@@ -45,6 +45,33 @@
       "success" : "Реєстрація успішна"
     }
 },
+
+"profile": {
+  "title": "Ласкаво просимо",
+  "noAuth": "Авторизуйтесь будь ласка",
+  "back_to_accoutn": "Акаунт",
+  "goods": {
+    "title": "Товари",
+    "orders": "Замовлення",
+    "reviews": "Відгуки"
+  },
+  "account": {
+    "title": "Обліковий запис",
+    "data": {
+      "title": "Мої деталі",
+      "name": "Ім'я",
+      "lastName": "Прізвище",
+      "email": "E-mail",
+      "password": "Пароль",
+      "phone": "Номер телефону"
+    },
+    "delivery_address": "Адреса доставки",
+    "payment_methods": "Способи оплати"
+  },
+  "contact_us": "Зв’яжіться з нами",
+  "logout": "Вийти"
+},
+
 "login_form": {
   "title": {
     "login": "Вхід",

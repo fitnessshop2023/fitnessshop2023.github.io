@@ -45,6 +45,32 @@
         "success" : "Registration successful"
       }
 },
+"profile": {
+  "title": "Ласкаво просимо",
+  "noAuth": "Авторизуйтесь будь ласка",
+  "back_to_account": "Account",
+  "goods": {
+    "title": "Goods",
+    "orders": "Orders",
+    "reviews": "Reviews"
+  },
+  "account": {
+    "title": "My account",
+    "data": {
+      "title": "My details",
+      "name": "First name",
+      "lastName": "Last name",
+      "email": "E-mail",
+      "password": "Password",
+      "phone": "Phone number"
+    },
+    "delivery_address": "Delivery address",
+    "payment_methods": "Payment methods"
+  },
+  "contact_us": "Contact us",
+  "logout": "Logout"
+},
+
 "login_form": {
   "title": {
     "login": "Login",
