@@ -1,9 +1,10 @@
-import MainContainer from '@/components/MainContainer/MainContainer';
+import MainContainer from "@/components/MainContainer/MainContainer";
+import Profile from "@/components/Pages/Profile/Profile";
 
-export default function Profile() {
+export default function page() {
   return (
     <MainContainer>
-      <h1>User Profile</h1>
+      <Profile />
     </MainContainer>
   );
 }

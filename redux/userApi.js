@@ -18,7 +18,16 @@ export const userApi = createApi({
         body,
       }),
     }),
+    getProfileInof: build.query({
+      query: (id) => `/users/${id}`
+    }),
+    getProfileDeliveryAdr: build.query({
+      query: (id) => `/delivery/address/users/${id}`
+    }),
+    getProfileComments: build.query({
+      query: (id) => `/comments/users/${id}`
+    })
   }),
 });
 
-export const { useRegisterUserMutation, useLoginMutation } = userApi;
+export const { useRegisterUserMutation, useLoginMutation, useGetProfileInofQuery, useGetProfileDeliveryAdrQuery, useGetProfileCommentsQuery } = userApi;
