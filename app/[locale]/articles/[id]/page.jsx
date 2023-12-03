@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setArticle, setArticles } from '@/redux/articlesSlice';
-import parseHTML from '@/utils/parseHtml';
+import parseHTML from '@/utils/parseHTML';
 
 import MainContainer from '@/components/MainContainer/MainContainer';
 import Spinner from '@/components/UI/Spinner/Spinner';
