@@ -1,0 +1,9 @@
+.container {
+  @apply grid grid-cols-2 gap-5 my-9;
+}
+.full {
+  @apply col-span-2;
+}
+.text {
+  @apply font-semibold text-xs leading-4 mt-3;
+}

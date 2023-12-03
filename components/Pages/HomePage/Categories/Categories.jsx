@@ -1,7 +1,10 @@
 'use client';
-import Spinner from '@/components/UI/Spinner/Spinner';
+
 import { useGetCategoriesQuery } from '@/redux/categoriesApi';
 import { useLocale } from 'next-intl';
+
+import Spinner from '@/components/UI/Spinner/Spinner';
+
 import styles from './Categories.module.scss';
 
 export function Categories() {
