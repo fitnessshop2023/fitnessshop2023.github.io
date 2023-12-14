@@ -1,41 +1,42 @@
-'use client';
-
-import { useRegisterUserMutation } from '@/redux/userApi';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-
-import Alert from '@/components/UI/Alert/Alert';
+'use client'
+import React, { useEffect, useState } from 'react';
 import Button from '@/components/UI/Button/Button';
-import GoogleButton from '@/components/UI/GoogleButton/GoogleButton';
 import Input from '@/components/UI/Input/Input';
+
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
+import { useUpdateProfileInfoMutation } from '@/redux/userApi';
+import validation from './validation'
+import { useTranslations } from 'next-intl';
+import Alert from '@/components/UI/Alert/Alert';
+import { useRouter } from 'next/navigation';
 import Spinner from '@/components/UI/Spinner/Spinner';
-import validationSchema from './validation';
 
-import styles from './UserRegistrationForm.module.scss';
-
-export default function UserRegistrationForm({ setRenderForm }) {
-  const [showAlert, setShowAlert] = useState(false);
-  const [registerUser, { isLoading, isSuccess, isError, error }] = useRegisterUserMutation();
+export default function Form({ info, styles }) {
+  const router = useRouter()
+  const tProfile = useTranslations('profile');
   const t = useTranslations('form');
+  const [ updateProfileInfo, { isLoading, isSuccess, isError, error } ] = useUpdateProfileInfoMutation();
+  const [showAlert, setShowAlert] = useState(false);
+
   const {
     register,
     handleSubmit,
     resetField,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(validationSchema(t)),
+    resolver: yupResolver(validation(t)),
   });
 
   useEffect(() => {
     if (isSuccess || isError) {
       setShowAlert(true);
-
       const timer = setTimeout(() => {
         setShowAlert(false);
-        if (isSuccess) setRenderForm('login');
-      }, 1000);
+        if (isSuccess) {
+          router.push('/profile');
+        }
+      }, 2000);
 
       return () => {
         clearTimeout(timer);
@@ -45,24 +46,25 @@ export default function UserRegistrationForm({ setRenderForm }) {
 
   const onSubmit = async (user) => {
     try {
-      await registerUser(user);
+      console.log(user)
+      await updateProfileInfo({ id: info.userId, user });
     } catch (error) {
       console.log(error);
     }
   };
 
-  if (isLoading) {
-    return <Spinner />;
-  }
-
   return (
     <>
-      <GoogleButton title={t('title.googleRegister')} />
-      <div className={styles.or}>{t('title.or')}</div>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        {isLoading && 
+          <div className='absolute left-[50%] top-0 translate-x-[-50%]'>
+            <Spinner />
+          </div>
+        }
         <Input
+          disabled={true}
           type="text"
-          placeholder={t('placeholder.firstName')}
+          placeholder={info.firstName}
           id="firstName"
           resetField={() => resetField('firstName')}
           name={t('label.firstName')}
@@ -71,8 +73,9 @@ export default function UserRegistrationForm({ setRenderForm }) {
           errorMessage={errors.firstName?.message}
         />
         <Input
+          disabled={true}
           type="text"
-          placeholder={t('placeholder.lastName')}
+          placeholder={info.lastName}
           id="lastName"
           resetField={() => resetField('lastName')}
           name={t('label.lastName')}
@@ -81,8 +84,9 @@ export default function UserRegistrationForm({ setRenderForm }) {
           errorMessage={errors.lastName?.message}
         />
         <Input
+          disabled={true}
           type="tel"
-          placeholder={t('placeholder.phone')}
+          placeholder={info.phoneNumber}
           id="phoneNumber"
           resetField={() => resetField('phoneNumber')}
           name={t('label.phone')}
@@ -91,8 +95,9 @@ export default function UserRegistrationForm({ setRenderForm }) {
           errorMessage={errors.phoneNumber?.message}
         />
         <Input
+          disabled={true}
           type="text"
-          placeholder={t('placeholder.email')}
+          placeholder={info.email}
           id="email"
           resetField={() => resetField('email')}
           name={t('label.email')}
@@ -100,24 +105,9 @@ export default function UserRegistrationForm({ setRenderForm }) {
           error={errors.email}
           errorMessage={errors.email?.message}
         />
-        <Input
-          type="password"
-          placeholder={t('placeholder.password')}
-          id="password"
-          name={t('label.password')}
-          register={register}
-          error={errors.password}
-          errorMessage={errors.password?.message}
-        />
-        <Button title={t('title.register')} />
+        <Button title={tProfile('save')} />
       </form>
-      <div className={styles.loginContainer}>
-        <span className="text-xs">{t('title.haveAnAccount')}</span>
-        <span className={styles.login} onClick={() => setRenderForm('login')}>
-          {t('title.login')}
-        </span>
-      </div>
-      {showAlert && isSuccess && <Alert success={true} message={t('request.success')} />}
+      {showAlert && isSuccess && <Alert toProfile={true} success={true} message={t('details_change.success')} />}
       {showAlert && isError && <Alert error={true} message={error?.data?.message} />}
     </>
   );

@@ -1,0 +1,16 @@
+.details {
+    .details_head {
+        @apply relative flex items-center justify-center mb-8;
+        h1 {
+            @apply text-md leading-5 font-semibold;
+        }
+        .back_btn {
+            @apply absolute left-0 top-[50%] translate-y-[-50%] flex items-center gap-2;
+        }
+    }
+    .details_body {
+        .form {
+            @apply relative flex justify-center flex-col gap-[23px];
+        }
+    }
+}

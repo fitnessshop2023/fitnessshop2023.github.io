@@ -7,7 +7,7 @@ import CustomerReviews from '@/components/Pages/HomePage/CustomerReviews/Custome
 
 export default function Home() {
   return (
-    <MainContainer keywords={'main page'}>
+    <MainContainer title={'Main page'} keywords={'main page'}>
       <BannerSlider />
       <Categories />
       <BestPrice />

@@ -3,11 +3,13 @@ import { useLocale, useTranslations } from "next-intl"
 import LanguageLink from 'next-intl/link';
 import styles from './LocaleSwitcher.module.scss';
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function LocaleSwitcher() {
     const t = useTranslations('LocaleSwitcher');
     const locale = useLocale();
     const [dropdownVisibility, setDropdownVisibility] = useState(false);
+    const pathname = usePathname();
 
     const toggleDropdownVisibility = () => {
         setDropdownVisibility(!dropdownVisibility);
@@ -36,9 +38,9 @@ export default function LocaleSwitcher() {
                 <div className={`${styles.dropdown_contnent} ${dropdownVisibility ? styles.show : ''}`}>
                     {(() => {
                         if (locale === 'ua') {
-                        return <LanguageLink href="/" locale="en">{t('en')}</LanguageLink>;
+                        return <LanguageLink href={`/${pathname.split('/').slice(2).join('/')}`} locale="en">{t('en')}</LanguageLink>;
                         } else if (locale === 'en') {
-                        return <LanguageLink href="/" locale="ua">{t('ua')}</LanguageLink>;
+                        return <LanguageLink href={`/${pathname.split('/').slice(2).join('/')}`} locale="ua">{t('ua')}</LanguageLink>;
                         } else {
                         return '';
                         }

@@ -48,6 +48,7 @@ const authSlice = createSlice({
     },
 
     logout: (state) => {
+      console.log("LOGOUT")
       if (state.rememberMe) {
         localStorage.clear();
       } else {

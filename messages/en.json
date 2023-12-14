@@ -10,7 +10,7 @@
     "ua": "Укр",
     "en": "En"
   },
-  "registration_form": {
+  "form": {
     "title": {
       "registration": "Registration",
       "register": "Sign up",
@@ -24,14 +24,23 @@
         "lastName": "Last name*",
         "phone": "Phone number*",
         "email": "Email*",
-        "password": "Password*"
+        "password": "Password*",
+        "newPassword": "New password*",
+        "city": "City",
+        "department": "Nova Poshta branch",
+        "fullName": "Повен ім’я"
       },
       "placeholder": {
         "firstName": "Enter first name",
         "lastName": "Enter last name",
         "phone": "Enter phone number",
         "email": "Enter email",
-        "password": "Enter password"
+        "password": "Enter password",
+        "current": "Enter the current password", 
+        "new": "Enter a new password" ,
+        "city": "Виберіть місто",
+        "department": "Виберіть Нової пошти",
+        "fullName": "Введіть повне ім’я"
       },
       "validation": {
         "required": "This field is required!",
@@ -39,10 +48,15 @@
         "maxLength": "Max length field",
         "email": "Incorrect mail",
         "phone": "Phone number must contain only numbers",
-        "password": "Insecure password"
+        "region": "Select a region",
+        "city": "Select a city",
+        "department": "Select a department/post office"
       },
       "request": {
         "success" : "Registration successful"
+      },
+      "change_password": {
+        "success" : "Password successfully changed"
       }
 },
 "profile": {
@@ -51,7 +65,14 @@
   "back_to_account": "Account",
   "goods": {
     "title": "Goods",
-    "orders": "Orders",
+    "orders": {
+      "title": "Orders",
+      "status": "Status",
+      "sum": "Sum",
+      "quantity": "Quantity",
+      "price": "Price",
+      "more": "See more"
+    },
     "reviews": "Reviews"
   },
   "account": {
@@ -61,14 +82,18 @@
       "name": "First name",
       "lastName": "Last name",
       "email": "E-mail",
-      "password": "Password",
       "phone": "Phone number"
     },
-    "delivery_address": "Delivery address",
+    "delivery_address": {
+      "title": "Delivery address"
+    },
     "payment_methods": "Payment methods"
   },
   "contact_us": "Contact us",
-  "logout": "Logout"
+  "save": "Save",
+  "change_password": "Сhange password",
+  "logout": "Logout",
+  "delete": "Delete account"
 },
 
 "login_form": {

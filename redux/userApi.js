@@ -21,13 +21,40 @@ export const userApi = createApi({
     getProfileInof: build.query({
       query: (id) => `/users/${id}`
     }),
+    updateProfileInfo: build.mutation({
+      query: ({ id, ...body }) => ({
+        url: `/users/${id}`,
+        method: 'PATCH',
+        body: body.user,
+      }),
+    }),
+    updateProfilePassword: build.mutation({
+      query: ({ id, ...body }) => ({
+        url: `/users/${id}/password`,
+        method: 'PATCH',
+        body: body.data,
+      }),
+    }),
     getProfileDeliveryAdr: build.query({
       query: (id) => `/delivery/address/users/${id}`
     }),
+
+    updateProfileAddress: build.mutation({
+      query: ({ id, ...body }) => ({
+        url: `/delivery/address/users/${id}`,
+        method: 'PATCH',
+        body: body.data,
+      }),
+    }),
+
     getProfileComments: build.query({
       query: (id) => `/comments/users/${id}`
+    }),
+    getProfileOrders: build.query({
+      query: (id) => `/orders/users/${id}`
     })
   }),
 });
 
-export const { useRegisterUserMutation, useLoginMutation, useGetProfileInofQuery, useGetProfileDeliveryAdrQuery, useGetProfileCommentsQuery } = userApi;
+export const { useRegisterUserMutation, useLoginMutation, useGetProfileInofQuery, useGetProfileDeliveryAdrQuery, useGetProfileCommentsQuery, 
+  useGetProfileOrdersQuery, useUpdateProfileInfoMutation, useUpdateProfilePasswordMutation } = userApi;

@@ -1,0 +1,51 @@
+.orders {
+    .orders_head {
+        h1 {
+            @apply mb-[32px] text-md leading-5 font-semibold;
+        }
+        .back_btn {
+            @apply flex items-center gap-2 mb-6;
+            span {
+                @apply text-sm font-semibold text-extraDarkGray;
+            }
+        }
+    }
+    .orders_body {
+        .orders_list {
+            @apply flex flex-col gap-4;
+            .ordre_item {
+                @apply flex items-center flex-wrap gap-6;
+                .img_wrapper {
+                    @apply flex flex-wrap flex-1;
+                    img {
+                        @apply w-1/2;
+                    }
+                }
+                .description {
+                    @apply flex-1;
+                    h2 {
+                        @apply text-sm font-semibold text-extraDarkGray;
+                    }
+                    p { 
+                        @apply flex items-center justify-between text-sm font-normal text-extraDarkGray;
+                        .status {
+                            @apply py-1 px-3;
+                            &.IN_PROGRESS {
+                                @apply bg-yellow;
+                            }
+                        }
+                        .sum {
+                            @apply py-1 px-3;
+                        }
+                    }
+                    button {
+
+                    }
+                }
+                .products {
+                    @apply w-full
+                }
+            }
+        }
+    }
+}

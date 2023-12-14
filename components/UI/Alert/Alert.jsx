@@ -3,9 +3,18 @@
 import { useState } from 'react';
 
 import styles from './Alert.module.scss';
+import { useRouter } from 'next/navigation';
 
-export default function Alert({ success, error, message }) {
+export default function Alert({ toProfile, success, error, message }) {
+  const router = useRouter()
   const [showAlert, setShowAlert] = useState(success || error);
+
+  const closeHandler = () => {
+    if (toProfile) {
+      router.push('/profile');
+    }
+    setShowAlert(false);
+  }
 
   return (
     <>
@@ -25,7 +34,7 @@ export default function Alert({ success, error, message }) {
                 <img
                   src="/icons/close.svg"
                   className="cursor-pointer w-[20px] h-[20px]"
-                  onClick={() => setShowAlert(false)}
+                  onClick={closeHandler}
                 />
               </div>
             </div>

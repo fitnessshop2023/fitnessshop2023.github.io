@@ -18,7 +18,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const tLoginForm = useTranslations('login_form');
-  const tRegForm = useTranslations('registration_form');
+  const tRegForm = useTranslations('form');
 
   const [isOpen, setIsOpen] = useState(false);
   const [renderForm, setRenderForm] = useState('login');
